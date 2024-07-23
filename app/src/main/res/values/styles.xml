@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomBottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconSize">32dp</item>
+        <item name="itemTextAppearanceActive">@style/BottomNavigationView.Active</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavigationView.Inactive</item>
+        <item name="itemIconTint">@color/selector_icon_color</item>
+        <item name="itemTextColor">@color/selector_text_color</item>
+    </style>
+
+    <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingTop">4dp</item> <!-- Add padding to the top -->
+    </style>
+
+    <style name="BottomNavigationView.Inactive" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingTop">4dp</item> <!-- Add padding to the top -->
+    </style>
+</resources>

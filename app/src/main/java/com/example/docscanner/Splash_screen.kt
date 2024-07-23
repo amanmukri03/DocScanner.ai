@@ -9,13 +9,17 @@ import androidx.appcompat.app.AppCompatActivity
 
 
 class Splashscreen : AppCompatActivity() {
+    // Duration of the splash screen in milliseconds
+    private val splashScreenDuration: Long = 3000 // 3 seconds
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_splash_screen)
-        Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this,MainActivity::class.java))
-                                                    finish()
-                                                    },3000)
+        // Navigate to MainActivity after the splash screen duration
+        Handler().postDelayed({
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish() // Close the splash activity so it won't appear when user presses back button
+        }, splashScreenDuration)
     }
 }
